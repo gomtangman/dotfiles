@@ -14,6 +14,7 @@ brew "fzf"           # 퍼지 파인더
 # brew "go"
 
 # GUI 앱
+cask "espanso"       # 텍스트 자동완성 (text expander)
 # cask "iterm2"
 # cask "visual-studio-code"
 # cask "docker"
