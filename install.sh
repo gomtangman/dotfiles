@@ -67,6 +67,23 @@ if [ -f "$DOTFILES_DIR/Brewfile" ]; then
 fi
 
 # ------------------------------------------------------------
+# Espanso 설정
+# ------------------------------------------------------------
+echo ""
+echo "📦 Espanso 설정 중..."
+ESPANSO_CONFIG_DIR="$HOME/Library/Application Support/espanso"
+ESPANSO_SRC="$DOTFILES_DIR/espanso"
+
+if [ -d "$ESPANSO_SRC" ]; then
+  mkdir -p "$ESPANSO_CONFIG_DIR"
+  link "$ESPANSO_SRC/config/default.yml" "$ESPANSO_CONFIG_DIR/config/default.yml"
+  link "$ESPANSO_SRC/match/base.yml"     "$ESPANSO_CONFIG_DIR/match/base.yml"
+  echo "  ✅ Espanso 설정 완료 (espanso restart 로 적용)"
+else
+  echo "  ℹ️  espanso/ 폴더 없음, 건너뜀"
+fi
+
+# ------------------------------------------------------------
 # Claude Code 설치
 # ------------------------------------------------------------
 echo ""
