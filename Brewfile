@@ -15,6 +15,7 @@ brew "fzf"           # 퍼지 파인더
 
 # GUI 앱
 cask "espanso"       # 텍스트 자동완성 (text expander)
+cask "ghostty"
 # cask "iterm2"
 # cask "visual-studio-code"
 # cask "docker"
